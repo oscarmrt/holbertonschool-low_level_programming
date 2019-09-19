@@ -1,7 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* This program will assign a random number*/
+/**
+ *This program will assign a random number
+*/
 int main(void)
 {
 int n;
