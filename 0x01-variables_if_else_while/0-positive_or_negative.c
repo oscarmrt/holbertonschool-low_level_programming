@@ -2,8 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /**
- *This program will assign a random number
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 int n;
