@@ -1,0 +1,24 @@
+#include "holberton.h"
+/**
+ * print_alphabet_x10 - Entry point
+ *
+ * Description: print_alphabet the alphabet 10 times in lowercase
+ *
+ * Return: Always 0 (Success)
+ */
+void print_alphabet_x10(void)
+{
+	char h[] = "abcdefghijklmnopqrstuvwxyz\n";
+	int b = 0;
+	int p = 0;
+
+	while (p < 10)
+	{
+		for ( ; b <= 26; b++)
+		{
+			_putchar(h[b]);
+		}
+		b = 0;
+		p++;
+	}
+}
