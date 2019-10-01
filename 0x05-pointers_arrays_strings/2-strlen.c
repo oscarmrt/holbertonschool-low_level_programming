@@ -1,0 +1,18 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+ * _strlen - Entry point
+ *
+ * Description: write a function that returns the length of a string
+ * @s: Is the parameter to be checked
+ * Return: Always 0 (Success)
+ */
+int _strlen(char *s)
+{
+	int a;
+
+	for (a = 0; s[a] != 0; a++)
+	{
+	}
+	return (a);
+}
