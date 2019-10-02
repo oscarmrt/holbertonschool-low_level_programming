@@ -14,17 +14,19 @@ void rev_string(char *s)
 	int x;
 
 	for (d = 0; s[d] != 0; d++)
-		{
-		}
-	     x = 0;
-	     d = d - 1;
+	{
+	}
 
-	     while (x < d)
-	     {
-		     rev = s[d];
-		     s[d] = s[x];
-		     s[x] = rev;
-		     x++;
-		     d--;
-	     }
+	x = 0;
+	d = d - 1;
+
+	while (x < d)
+	{
+		rev = s[d];
+		s[d] = s[x];
+		s[x] = rev;
+		x++;
+		d--;
+	}
 }
+
