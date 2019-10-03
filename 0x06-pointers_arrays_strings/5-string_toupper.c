@@ -1,0 +1,20 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+ * *string_toupper - Entry point
+ *
+ * Description: write a function that changes all lowercase letters - uppercase
+ * @upper: Is the parameter to be checked
+ * Return: Always 0 (Success)
+ */
+char *string_toupper(char *upper)
+{
+	int h;
+
+	for (h = 0; upper[h] != '\0'; h++)
+	{
+	if (upper[h] >= 97 && upper[h] <= 122)
+		upper[h] = upper[h] - 32;
+	}
+	return (upper);
+}
