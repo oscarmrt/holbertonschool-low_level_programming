@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * factorial - Entry point
+ *  factorial - Entry point
  *
  * Description: write a function that returns the factorial of a given number
  * @n: Is the parameter to be checked
@@ -9,11 +9,13 @@
  */
 int factorial(int n)
 {
-	int f;
-
 	if (n < 0)
+	{
 		return (-1);
-	else
-		f = n * factorial(n - 1);
-	return (f);
+	}
+	if (n < 1)
+	{
+		return (1);
+	}
+	return (n * factorial(n - 1));
 }
