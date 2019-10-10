@@ -1,0 +1,33 @@
+#include "holberton.h"
+#include <stdio.h>
+int prime2(int n, int k);
+/**
+ * is_prime_number - Entry point
+ *
+ * Description: write a function that returns 1 if the input integer is prime
+ * @n: Is the parameter to be checked
+ * Return: Always 0 (Success)
+ */
+int is_prime_number(int n)
+{
+	return (prime2(n, 2));
+}
+
+/**
+ * prime2 - Entry point
+ *
+ * Description: Auxiliar function to proove prime numbers
+ * @n: Is the parameter to be checked
+ * @i: Is the parameter to be checked
+ * Return: Always (0) success
+ */
+int prime2(int n, int k)
+{
+	if (n % k == 0)
+		return (0);
+	if (n < 2)
+		return (0);
+	if (n / 2 < k)
+		return (1);
+	return (prime2(n, k + 1));
+}
