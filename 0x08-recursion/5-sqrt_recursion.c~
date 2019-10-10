@@ -1,0 +1,24 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+ * _sqrt_recursion - Entry point
+ *
+ * Description: write a function that returns the natural square root
+ * @n: Is the parameter to be checked
+ * Return: Always 0 (Success)
+ */
+int _sqrt_recursion(int n)
+{
+	return (sqrt_recursion2(n, 0));
+}
+
+int sqrt_recursion2(int n, int i)
+{
+	if (n < 0)
+		return (-1);
+	if (n < i)
+		return (-1);
+	if (n == i * i)
+		return (i);
+	return (sqrt_recursion2(n, i + 1));
+}
