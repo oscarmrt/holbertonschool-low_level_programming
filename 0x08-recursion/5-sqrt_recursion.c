@@ -13,6 +13,14 @@ int _sqrt_recursion(int n)
 	return (sqrt_recursion2(n, 0));
 }
 
+/**
+ * sqrt_recursion2 - Entry point
+ *
+ * Description: Auxiliar function to proove the root
+ * @n: Is the parameter to be checked
+ * @i: Is the parameter to be checked
+ * Return: Always (0) success
+ */
 int sqrt_recursion2(int n, int i)
 {
 	if (n <= 0)
