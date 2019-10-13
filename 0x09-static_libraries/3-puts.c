@@ -1,0 +1,19 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+ * _puts - Entry point
+ *
+ * Description: write a function that prints a string, followed by a new line
+ * @str: Is the parameter to be checked
+ * Return: Always 0 (Success)
+ */
+void _puts(char *str)
+{
+
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		str++;
+	}
+	_putchar('\n');
+}

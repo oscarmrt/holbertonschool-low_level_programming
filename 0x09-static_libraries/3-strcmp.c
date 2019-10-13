@@ -1,0 +1,27 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+ * _strcmp - Entry point
+ *
+ * Description: write a function that compares two strings
+ * @s1: Is the parameter to be checked
+ * @s2: Is the parameter to be checked
+ * Return: Always 0 (Success)
+ */
+int _strcmp(char *s1, char *s2)
+{
+	int i;
+	int w;
+
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		if (s1[i] == s2[i])
+			w = s1[i] - s2[i];
+		else
+		{
+			w = s1[i] - s2[i];
+			break;
+		}
+	}
+	return (w);
+}
