@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
 
 	if ((argc - 1) != 2)
 	{
-	printf("error\n");
-	return (1);
+		printf("error\n");
+		return (1);
 	}
 	k = atoi(argv[1]);
 	q = atoi(argv[2]);
