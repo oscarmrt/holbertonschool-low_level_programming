@@ -11,11 +11,12 @@
  */
 char **strtow(char *str)
 {
-	int k;
-
+	char **s;
 	if (str == NULL)
 		return (NULL);
-	if (str == "")
+	if (str[0] == 0)
 		return (NULL);
-	return (0);
+	s = malloc(3);
+	s[0] = malloc(2);
+	return (s);
 }
