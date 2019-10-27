@@ -10,4 +10,14 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+/**
+ * struct aux - Structure for file 3
+ * @au: First parameter
+ * @p: Second parameter
+ */
+typedef struct aux
+{
+	char *au;
+	void (*p)(va_list);
+} aux_t;
 #endif
