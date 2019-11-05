@@ -13,9 +13,9 @@ int sum_listint(listint_t *head)
 	listint_t *prov = head;
 	int s;
 
-	if (prov == NULL)
+	if (head == NULL)
 		return (0);
-	for (s = 0; prov != NULL; s++)
+	for (s = 0; prov != NULL;)
 	{
 		s = s + prov->n;
 		prov = prov->next;
