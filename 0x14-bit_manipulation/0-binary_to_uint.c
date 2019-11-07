@@ -1,0 +1,34 @@
+#include "holberton.h"
+
+/**
+ * binary_to_uint - entry point
+ * @b: Is the parameter to be checked
+ *
+ * Description: write a function that converts a binary number to an
+ * unsigned int.
+ * Return: The converted number.
+ */
+unsigned int binary_to_uint(const char *b)
+{
+	unsigned int add;
+	unsigned int pw;
+	int y;
+
+	add = 0;
+	pw = 1;
+
+	if (b == NULL)
+		return (0);
+
+	for (y = 0; b[y] != '\0'; y++)
+	{
+		if (b[y] != '0' && b[y] != '1')
+			return (0);
+	}
+	for (; y > 0; y--)
+	{
+		add = add + ((b[y - 1]) - 48) * pw;
+		pw = pw * 2;
+	}
+	return (add);
+}
