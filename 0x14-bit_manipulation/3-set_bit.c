@@ -18,7 +18,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 	if (index > 63)
 		return (-1);
 
-	if (*n | mk)
 		*n = *n + mk;
 	return (1);
 }
