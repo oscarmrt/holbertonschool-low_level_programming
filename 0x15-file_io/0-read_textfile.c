@@ -1,0 +1,44 @@
+#include "holberton.h"
+
+/**
+ * read_textfile - entry point
+ * @filename: Is the parameter to be checked
+ * @letters: Is the parameter to be checked
+ *
+ * Description: write a function that reads a text file and prints
+ * it to the POSIX standard output.
+ * Return: The actual number of letters it could read and print
+ */
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+	ssize_t a = 0;
+	ssize_t b = 0;
+	int k;
+	char *p;
+
+	if (filename == NULL)
+		return (0);
+
+	k = open(filename, O_RDONLY);
+	if (k == -1)
+		return (0);
+
+	p = malloc(sizeof(char) * letters);
+	if (p == NULL)
+		return (0);
+	b = read(k, p, letters);
+	if (b == -1)
+	{
+		free(p);
+		return (0);
+	}
+	a = write(STDOUT_FILENO, p, b);
+	if (a == -1)
+	{
+		free(p);
+		return (0);
+	}
+	close(k);
+	free(p);
+	return (a);
+}
