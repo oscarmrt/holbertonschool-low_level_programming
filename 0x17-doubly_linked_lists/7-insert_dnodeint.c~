@@ -1,0 +1,55 @@
+#include "lists.h"
+
+/**
+ * insert_dnodeint_at_index - entry point
+ * @h: Is the parameter to be checked
+ * @idx: Is the parameter to be checked
+ * @n: Is the parameter to be checked
+ *
+ * Description: write a function that inserts a new node at a given position
+ * Return: the adress of the new node, or NULL if it failed..
+ */
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+{
+	dlistint_t *nn, *hcp;
+	unsigned int k;
+
+	hcp = *h;
+	nn = malloc(sizeof(dlistint_t));
+	if (nn == NULL)
+		return (NULL);
+	nn->n = n;
+	while (hcp != NULL && hcp->prev != NULL)
+	{
+		hcp = hcp->prev;
+		*h = (*h)->prev;
+	}
+	if (idx == 0)
+	{
+		free(nn);
+		return (add_dnodeint(h, n));
+	}
+	for (k = 0; (k < idx - 1) && (hcp != NULL); k++)
+	{
+		if (hcp == NULL)
+		{
+			free(nn);
+			return (NULL);
+		}
+		hcp = hcp->next;
+	}
+	if (hcp->next == NULL)
+	{
+		nn->next = NULL;
+		nn->prev = hcp;
+		hcp->next = nn;
+	}
+	else
+	{
+		nn->next = hcp->next;
+		nn->prev = hcp;
+		hcp->next->prev = nn;
+		hcp->next = nn;
+	}
+	return (nn);
+}
