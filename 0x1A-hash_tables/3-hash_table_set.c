@@ -10,22 +10,22 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-    unsigned long int hash_index;
-    hash_node_t *new_node;
-    hash_node_t *comp_node;
+	unsigned long int hash_index;
+	hash_node_t *new_node;
+	hash_node_t *cp_n;
 
-    if (ht == NULL || key == NULL || value == NULL)
+	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
-    
-    hash_index = key_index((unsigned char *)key, ht->size);
 
-	for (comp_node = ht->array[hash_index]; comp_node != NULL; comp_node = comp_node->next)
+	hash_index = key_index((unsigned char *)key, ht->size);
+
+	for (cp_n = ht->array[hash_index]; cp_n != NULL; cp_n = cp_n->next)
 	{
-		if (strcmp(comp_node->key, key) == 0)
+		if (strcmp(cp_n->key, key) == 0)
 		{
-			free(comp_node->value);
-			comp_node->value = strdup(value);
-			if (comp_node->value == NULL)
+			free(cp_n->value);
+			cp_n->value = strdup(value);
+			if (cp_n->value == NULL)
 				return (0);
 			return (1);
 		}
