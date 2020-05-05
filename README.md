@@ -1,1 +1,1 @@
-This repository is about the first project of C.
+This repository is about the first project of C programming language.
